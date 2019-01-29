@@ -1,0 +1,100 @@
+{
+    "pages": [
+        "pages/guideMap/guideMap",
+        "pages/personal/index",
+        "pages/personal/vip_info/index",
+        "pages/personal/vip_info1/index",
+        "pages/personal/wallet/index",
+        "pages/personal/wallet_detail/index",
+        "pages/personal/wallet_recharge/index",
+        "pages/personal/wallet_withdraw/index",
+        "pages/personal/order/index",
+        "pages/personal/order/orderList",
+        "pages/personal/order/order_waitUse",
+        "pages/personal/order/order_refund",
+        "pages/personal/order/order_refund_detail",
+        "pages/personal/order/order_used",
+        "pages/personal/order/order_pay",
+        "pages/personal/order/order_refunded",
+        "pages/personal/check_code/index",
+        "pages/personal/resume_code/index",
+        "pages/personal/devices/index",
+        "pages/personal/devices_success/index",
+        "pages/personal/coupon/index",
+        "pages/rentPage/rentPage",
+        "pages/rentPage/rent_now",
+        "pages/rentPage/confirm",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/player/player",
+        "pages/xinxifabu/xinxifabu",
+        "pages/scheduleDetail/scheduleDetail",
+        "pages/restaurant/restaurant",
+        "pages/restaurant/success",
+        "pages/restaurant/detail",
+        "pages/coupon/coupon",
+        "pages/coupon/couponList",
+        "pages/service/service",
+        "pages/gotoMap/gotoMap",
+        "pages/detail/detail",
+        "pages/news/news",
+        "pages/xiangqing/xiangqing",
+        "pages/suggestion/suggestion",
+        "pages/list/list",
+        "pages/suggestionlist/suggestionlist",
+        "pages/zuping/zuping",
+        "pages/zupingdetail/zupingdetail",
+        "pages/submit/submit",
+        "pages/wifi/wifi",
+        "pages/tijiao/tijiao",
+        "pages/shizu/mine/mine",
+        "pages/shizu/shiwu/shiwu",
+        "pages/lost/mine/mine",
+        "pages/lost/shiwu/shiwu",
+        "pages/carRecord/carRecord",
+        "pages/releasepass/releasepass",
+        "pages/carRecord/before/before",
+        "pages/carRecord/after/after",
+        "pages/tingche/through/through",
+        "pages/tingche/tingche",
+        "pages/pay/pay",
+        "pages/shizu/shizu"
+    ],
+    "subPackages": [
+        {
+            "root": "pages/chuanloo",
+            "pages": [
+                "scheduleDetail/scheduleDetail",
+                "tiedCard/tiedCard",
+                "menuList/menuList",
+                "chuanloo/chuanlooHome/chuanlooHome",
+                "orderDetail/orderDetail",
+                "scheduleSuccess/scheduleSuccess",
+                "myOrders/myOrders",
+                "cardBalance/cardBalance",
+                "myWallet/myWallet",
+                "chargMoney/chargMoney"
+            ]
+        },
+        {
+            "root": "pages/chargingPile",
+            "pages": [
+                "chargeDetail/chargeDetail",
+                "chargingPileHome/chargingPileHome",
+                "chargeType/chargeType",
+                "inputCode/inputCode",
+                "myOrders/myOrders",
+                "charge/charge"
+            ]
+        }
+    ],
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "window": {
+        "backgroundTextStyle": "#000",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "2018中国森林旅游节",
+        "navigationBarTextStyle": "black"
+    }
+}
