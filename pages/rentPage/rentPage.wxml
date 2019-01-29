@@ -1,0 +1,19 @@
+<view class='ytb-container'>
+    <view class='show-big'>
+        <view class='show-b-img v-center'>
+            <image mode='aspectFill' src='../../image/my/{{list[currentIdx].imgUrl}}' style='width:{{list[currentIdx].styleW * 2}}rpx;height:{{list[currentIdx].styleH * 2}}rpx;'></image>
+        </view>
+        <view class='show-b-name'>{{list[currentIdx].name}}</view>
+        <view class='show-b-txt'>{{list[currentIdx].useNote}}</view>
+        <view class='show-b-txt'>{{list[currentIdx].price}}元一次，{{list[currentIdx].rented}}元租金</view>
+        <view class='show-b-txt-s'>{{list[currentIdx].sellNum}}人租过</view>
+        <view class='btn-bar1' catchtap='bindViewTap'>我要租</view>
+    </view>
+    <view class='show-small'>
+        <block wx:for='{{list}}' wx:key='{{index}}'>
+            <view class='show-s-item v-center {{currentIdx==index?"active":""}}' catchtap='showBig' data-index='{{index}}'>
+                <image mode='aspectFill' src='../../image/my/{{item.imgUrl}}' style='width:{{item.styleW}}rpx;height:{{item.styleH}}rpx;'></image>
+            </view>
+        </block>
+    </view>
+</view>

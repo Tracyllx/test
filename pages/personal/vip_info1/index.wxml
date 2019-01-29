@@ -1,0 +1,19 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='vip-scroll'>
+        <view class='my-menu-list'>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-label'>会员卡号</view>
+                <view class='kk-cell-input'>
+                    <input type='text' value='2525 525252  344' placeholder='自动生成' placeholder-class='plh-class'></input>
+                </view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-label'>会员卡名称</view>
+                <view class='kk-cell-input'>
+                    <input type='text' value='和诺诺' placeholder='自动生成' placeholder-class='plh-class'></input>
+                </view>
+            </view>
+        </view>
+        <view class='btn-bar' catchtap='bindViewTap'>确认提交</view>
+    </scroll-view>
+</view>

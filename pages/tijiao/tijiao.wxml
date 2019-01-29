@@ -1,0 +1,20 @@
+<view class="box">
+    <view class="content">
+        姓  名：<input type="text" placeholder="请输入真实的姓名"></input>
+    </view>
+     <view class="content">
+        手机号：<input type="tel" placeholder="请输入有效的手机号码"></input>
+    </view>
+    <view class="content">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="data1">
+        <text class="txt">丢失时间：</text> <view class="picker picker1">
+             {{date}}
+            </view>
+        </picker>
+    </view>
+    <view class="bottom">
+        <button class="submit" bindtap='Todetail'>
+            确认提交
+        </button>
+    </view>
+</view>

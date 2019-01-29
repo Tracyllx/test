@@ -1,0 +1,46 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='vip-scroll'>
+        <view class='my-menu-list'>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>头像</view>
+                <view class='header-box'>
+                    <image src='{{userInfo.avatarUrl}}'></image>
+                </view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>姓名</view>
+                <view class='kk-cell-desc'>{{userInfo.nickName}}</view>
+            </view>
+            <!-- <view class='kk-cell-box'>
+                <view class='kk-cell-title'>会员性别</view>
+                <view class='kk-cell-desc'>女</view>
+                <view class='kk-cell-arrow'></view>
+            </view> -->
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>手机号码</view>
+                <view class='kk-cell-desc'>158 3859 4425</view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>证件类型</view>
+                <view class='kk-cell-desc'>二代居民身份证</view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>证件号码</view>
+                <view class='kk-cell-desc'>421121 19930216 1111</view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>联系地址</view>
+                <view class='kk-cell-desc'>广东省广州市番禺区市桥街道办</view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>车牌号</view>
+                <view class='kk-cell-desc'>粤A24382</view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-title'>个人备注</view>
+                <view class='kk-cell-desc'>无</view>
+            </view>
+        </view>
+        <view class='btn-bar' catchtap='bindViewTap'>完善会员信息</view>
+    </scroll-view>
+</view>

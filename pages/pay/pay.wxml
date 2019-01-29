@@ -1,0 +1,11 @@
+<view class="box">
+    <view class="box-t">
+        <view class="head"><text>长鹿休博园</text></view>
+        <view class="foot">
+            <view class="foot1"><text>计时时段</text><text class="txt2">13:43-16:42</text></view>
+            <view class="foot2"><text>车牌号</text><text class="txt2">粤A***35</text></view>
+            <view class="foot3"><text>应缴</text><text class="txt3 txt2">￥23.55</text></view>
+        </view>
+    </view>
+    <button class="btn">缴费</button>
+</view>

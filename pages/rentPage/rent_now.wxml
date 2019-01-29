@@ -1,0 +1,19 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='vip-scroll'>
+        <view class='my-menu-list'>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-label'>姓 名</view>
+                <view class='kk-cell-input'>
+                    <input type='text' value='{{username}}' bindblur='nameInput' bindinput='nameInput' placeholder='请输入真实姓名' placeholder-class='plh-class'></input>
+                </view>
+            </view>
+            <view class='kk-cell-box'>
+                <view class='kk-cell-label'>手机号码</view>
+                <view class='kk-cell-input'>
+                    <input type='number' maxlength='11' value='{{userphone}}' bindblur='phoneInput' bindinput='phoneInput' placeholder='请输入有效的手机号码' placeholder-class='plh-class'></input>
+                </view>
+            </view>
+        </view> 
+        <view class='btn-bar {{isT?"active":""}}' catchtap='bindViewTap'>确认提交</view>
+    </scroll-view>
+</view>

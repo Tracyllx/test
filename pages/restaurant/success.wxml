@@ -1,0 +1,8 @@
+<view class='ytb-container'>
+    <view class='box'>
+        <image src='../../image/success.png'></image>
+        <view class='txt'>预约成功</view>
+    </view>
+    <view class='btn-item btn-b' catchtap='gotoUrl' data-index='detail'>订单详情</view>
+    <view class='btn-item btn-w' catchtap='gotoUrl' data-index='index'>返回首页</view>
+</view>

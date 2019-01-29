@@ -1,0 +1,67 @@
+<view class='ytb-container'>
+    <view class='nav-bar'>
+        <view class='nav-item {{navActive == 1 ? "nav-active" : ""}}' catchtap='navTap' data-index='1'>全 部
+            <text wx:if='{{navActive == 1}}' class='nav-line'></text>
+        </view>
+        <view class='nav-item {{navActive == 2 ? "nav-active" : ""}}' catchtap='navTap' data-index='2'>待付款
+            <text wx:if='{{navActive == 2}}' class='nav-line'></text>
+        </view>
+        <view class='nav-item {{navActive == 3 ? "nav-active" : ""}}' catchtap='navTap' data-index='3'>待使用
+            <text wx:if='{{navActive == 3}}' class='nav-line'></text>
+        </view>
+        <view class='nav-item {{navActive == 4 ? "nav-active" : ""}}' catchtap='navTap' data-index='4'>退款/售后
+            <text wx:if='{{navActive == 4}}' class='nav-line'></text>
+        </view>
+        <view class='nav-gray-line'></view>
+    </view>
+    <scroll-view scroll-y class='order-list' bindscrolltolower='loadMore'>
+        <view class='order-item' wx:for='{{dataList}}' wx:key='{{index}}' catchtap='gotoDetail' data-index='{{index}}'>
+            <view class='order-img'>
+                <image mode='aspectFill' wx:if='{{item.photos[0]}}' src='{{item.photos[0]}}'></image>
+            </view>
+            <view class='order-info'>
+
+                <block wx:if='{{item.product_type==12||item.product_type==13||item.product_type==14}}'>
+                    <view class='order-name'>私人定制</view>
+                    <view class='order-spec'>{{item.productName}}</view>
+                </block>
+                <view wx:else class='order-name'>{{item.orgnName}}</view>
+
+                <block wx:if='{{item.product_type==9}}'>
+                    <view class='order-spec'>{{item.productName}} {{item.ticketNum}}间</view>
+                    <view class='order-spec'>使用时间：{{item.startDate}}至{{item.endDate}}</view>
+                </block>
+                <view wx:else class='order-spec'>数量：{{item.ticketNum}}</view>
+
+                <view class='order-limit-time' wx:if='{{item.limitTime}}'>{{item.limitTime}}</view>
+                <view class='order-price-and-btn'>
+                    <view class='order-price priceColor'>¥ {{item.amount}}</view>
+                    <view wx:if='{{item.orderStatus==1}}' class='order-btn buttonBg' catchtap='orderButton' data-type='cancel' data-index='{{index}}'>取消订单</view>
+                    <view wx:if='{{item.orderStatus==1}}' class='order-btn baseBg' catchtap='orderButton' data-type='continue' data-index='{{index}}'>继续支付</view>
+                    <!-- <view wx:if='{{item.orderStatus!=1}}' class='order-btn baseBg' catchtap='orderButton' data-type='onemore' data-index='{{index}}'>再来一单</view> -->
+                    <view wx:if='{{item.orderStatus==3||item.orderStatus==5||item.orderStatus==6}}' class='order-btn buttonBg' catchtap='orderButton' data-type='delete' data-index='{{index}}'>删除订单</view>
+                </view>
+
+                <view wx:if='{{item.orderStatus==1}}' class='order-status baseColor'>待付款</view>
+                <view wx:if='{{item.orderStatus==2}}' class='order-status baseColor'>待使用</view>
+                <view wx:if='{{item.orderStatus==3}}' class='order-status gray999'>已取消</view>
+                <view wx:if='{{item.orderStatus==4}}' class='order-status baseColor'>退款中</view>
+                <view wx:if='{{item.orderStatus==5}}' class='order-status gray999'>已退款</view>
+                <view wx:if='{{item.orderStatus==6}}' class='order-status gray999'>已使用</view>
+                <view wx:if='{{item.orderStatus==7}}' class='order-status gray999'>已取票</view>
+            </view>
+        </view>
+        <!-- <view class='nonedata' wx:if='{{dataList.length==0}}'>暂无数据...</view> -->
+        <!-- <view class='nonedata' wx:else>------ 到底啦 ------</view> -->
+    </scroll-view>
+    <!-- 自定义提示弹窗 -->
+    <view wx:if='{{dialogShow}}' class='kk-mask'>
+        <view class='kk-mask-box'>
+            <view class='kk-mask-content'>是否{{dialogTxt}}该订单？</view>
+            <view class='kk-mask-btn'>
+                <view class='kk-mask-btn-item gray999' catchtap='dialogButton' data-type='cancel'>取 消</view>
+                <view class='kk-mask-btn-item baseColor no-b' catchtap='dialogButton' data-type='confirm'>确 定</view>
+            </view>
+        </view>
+    </view>
+</view>

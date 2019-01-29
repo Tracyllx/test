@@ -1,0 +1,35 @@
+<!--pages/shizu/shiwu/shiwu.wxml-->
+<view class="box">
+    
+        张先生在2018年11月2号下午3点23分在五指山景区
+        三桠塘幽谷丢失了一台黑色的iPhone XS Max手机一
+        台。
+    <text class="time">2018-11-02  15:34</text>
+    <button class="btn">联系他</button>
+</view>
+<view class="box">
+    
+        张先生在2018年11月2号下午3点23分在五指山景区
+        三桠塘幽谷丢失了一台黑色的iPhone XS Max手机一
+        台。
+    <text class="time">2018-11-02  15:34</text>
+    <button class="btn">联系他</button>
+</view>
+<view class="box">
+    
+        张先生在2018年11月2号下午3点23分在五指山景区
+        三桠塘幽谷丢失了一台黑色的iPhone XS Max手机一
+        台。
+    <text class="time">2018-11-02  15:34</text>
+    <button class="btn">联系他</button>
+</view>
+<view class="box">
+    
+        张先生在2018年11月2号下午3点23分在五指山景区
+        三桠塘幽谷丢失了一台黑色的iPhone XS Max手机一
+        台。
+    <text class="time">2018-11-02  15:34</text>
+    <button class="btn">联系他</button>
+</view>
+
+

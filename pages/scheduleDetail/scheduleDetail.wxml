@@ -1,0 +1,61 @@
+<view class='ytb-container'>
+    <view class='detail-info'>
+       <image src='{{bannerImg}}'></image>
+    </view>
+    <view class='time-tab' wx:if='{{!isYuYue}}'>
+        <block wx:for='{{timeList}}' wx:key='{{index}}'>
+            <view class='time-tab-item {{timeAcitve==index?"time-tab-acitve":""}}' catchtap='timeTap' data-index='{{index}}'>{{item.text}}</view>
+        </block>
+    </view>
+    <scroll-view scroll-y class='scroll-view' wx:if='{{!isYuYue}}'>
+        <view wx:if='{{infoList.length == 0}}' class='nonedata'>今天的场次结束了~</view>
+        <block wx:for='{{infoList}}' wx:key='{{index}}'>
+            <view class='list-item' wx:if='{{item.showItem}}'>
+                <view class='list-item-box'>
+                    <view class='list-item-line'>
+                        <view class='list-item-1 c-black s-small'>{{item.startTime}}</view>
+                        <view class='list-item-2 c-black s-small'>{{item.maxNum}}人/场</view>
+                    </view>
+                    <view class='list-item-line'>
+                        <view class='list-item-1 c-black s-small'>至{{item.endTime}}</view>
+                        <view class='list-item-2 c-gray s-small'>剩余{{item.surplus+(timeAcitve*2-1)}}人</view>
+                    </view>
+                </view>
+                <view class='list-item-yuyue'>
+                    <view class='yuyue' catchtap='confirmSchedule' data-index='{{index}}'>预约</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+    <scroll-view scroll-y class='scroll-view' wx:if='{{isYuYue}}' style='top: 300rpx; background-color: #eee;'>
+        <view class='yuyue-info'>
+            <view class='yuyue-item'>
+                <view class='yuyue-item-title c-black'>当前排队情况：</view>
+                <view class='yuyue-item-desc'></view>
+            </view>
+            <view class='yuyue-item'>
+                <view class='yuyue-item-title c-gray'>排队号码</view>
+                <view class='yuyue-item-desc c-black'>D3613</view>
+            </view>
+            <view class='yuyue-item'>
+                <view class='yuyue-item-title c-gray'>前面排队人数</view>
+                <view class='yuyue-item-desc c-black'>100人</view>
+            </view>
+            <view class='yuyue-item'>
+                <view class='yuyue-item-title c-gray'>预约排队时间</view>
+                <view class='yuyue-item-desc c-black'>{{yuyueObj.orderDate}} {{yuyueObj.timeRange}}</view>
+            </view>
+            <view class='yuyue-item no-b'>
+                <view class='yuyue-item-title c-gray'>预计排队时间</view>
+                <view class='yuyue-item-desc c-black'>
+                    <text class='num-block'>3</text>
+                    <text class='num-block'>0</text>
+                    <text class='num-tip'>:</text>
+                    <text class='num-block'>0</text>
+                    <text class='num-block'>0</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='cancel-yuye' wx:if='{{isYuYue}}'>取消排队</view>
+</view>

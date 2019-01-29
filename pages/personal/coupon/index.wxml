@@ -1,0 +1,31 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='coupon-scroll'>
+        <view class='has-box-item'>
+            <image src='{{baseUrl}}html/haiquanwan/img/coupon/bg_1.png'></image>
+            <view class='has-txt-con'>
+                <view class='has-txt-con-l'>
+                    <text class='money-icon'>¥</text>
+                    <text class='money-num'>100</text>
+                    <text class='gp-yhq'>购票优惠券</text>
+                </view>
+                <view class='has-txt-con-r'>
+                    <text class='guize'>优惠券使用规则：\n1、只限本人使用\n2、只能购票使用</text>
+                </view>
+            </view>
+            <view class='deff-bar'>有效期至2018-10-21</view>
+        </view>
+        <view class='has-box-item'>
+            <image src='{{baseUrl}}html/haiquanwan/img/coupon/bg_1.png'></image>
+            <view class='has-txt-con'>
+                <view class='has-txt-con-l'>
+                    <text class='money-icon'>¥</text>
+                    <text class='money-num'>200</text>
+                </view>
+                <view class='has-txt-con-r'>
+                    <text class='man'>满498可用\n</text>
+                    <text class='yhq'>优惠券</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

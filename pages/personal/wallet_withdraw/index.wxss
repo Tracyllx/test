@@ -1,0 +1,98 @@
+page {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+
+.withdrawals {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 30rpx;
+    color: #666;
+    padding: 30rpx 5%;
+}
+
+.input {
+    height: 100rpx;
+    margin: 0 5%;
+    padding: 10rpx 0;
+    display: flex;
+    border-bottom: 1rpx solid #eee;
+}
+
+.input-tip {
+    flex: 0 0 80rpx;
+    height: 100%;
+    line-height: 100rpx;
+    font-size: 80rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-box {
+    flex: 1;
+    height: 100%;
+}
+
+.input-box>input {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    font-size: 100rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.plhClass {
+    font-size: 38rpx;
+    font-weight: normal;
+    color: #cdcdcd;
+}
+
+.tip1 {
+    padding-top: 0;
+}
+
+.tip2 {
+    padding: 30rpx 5%;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.color {
+    color: #39b6a3;
+}
+
+.fr {
+    float: right;
+}
+
+.line {
+    height: 16rpx;
+}
+
+.tip-note {
+    font-size: 28rpx;
+    color: #999;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-indent: 24rpx;
+}
+
+.btn-bar1 {
+    width: 88%;
+    margin: 80rpx auto;
+    height: 90rpx;
+    overflow: hidden;
+    line-height: 90rpx;
+    font-size: 34rpx;
+    letter-spacing: 3rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 90rpx;
+}

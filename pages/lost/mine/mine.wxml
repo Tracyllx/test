@@ -1,0 +1,20 @@
+<view class="box">
+    <view class="content">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="data1">
+        <text class="txt">丢失时间：</text> <view class="picker picker1">
+             {{date}}
+                    </view>
+        </picker>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class="data2">
+        <text class="txt">丢失地点：</text><view class="picker">
+        {{region[3]}}
+       </view>
+       </picker>
+    </view>
+    <view class="detail">
+        <text>丢失物品描述:</text>
+        <textarea class="text" name="" id="" cols="30" rows="10" placeholder="请详细描述你丢失的物品..."> 
+        </textarea>
+    </view>
+    <button class="submit" bindtap='todetail'>提交</button>
+</view>

@@ -1,0 +1,39 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='coupon-scroll'>
+        <view class='top-box'>
+            <view class='txt-c'>
+                <icon type='success' size='50' color='#39b6a3'></icon>
+            </view>
+            <view class='txt-c'>领取成功！</view>
+        </view>
+        <view class='list'>
+            <view class='list-title'>您可以去以下商家进行使用：</view>
+            <view class='list-item' wx:for='{{[0,1,2]}}' wx:key='{{index}}'>
+                <view class='item-info'>
+                    <view class='item-price v-center'>
+                        <text class='fz-s'>¥</text>
+                        <text>100</text>
+                    </view>
+                    <view class='item-detail'>
+                        <view>海泉湾游乐项目</view>
+                        <view class='c-6 fz-s'>2018-09-24到期</view>
+                        <view class='c-6 fz-s'>本券满399可用</view>
+                    </view>
+                    <view class='item-deff'>
+                        <view class='item-deff-time'>剩5日</view>
+                        <view class='item-deff-use'>去使用</view>
+                    </view>
+                </view>
+                <view class='item-time'>限海泉湾游乐场内使用</view>
+                <view class='circle-bar'>
+                    <view class='circle-left'></view>
+                    <view class='circle-right'></view>
+                </view>
+            </view>
+        </view>
+        <view class='raidal1'></view>
+        <view class='raidal2'></view>
+        <view class='raidal3'></view>
+        <view class='raidal4'></view>
+    </scroll-view>
+</view>

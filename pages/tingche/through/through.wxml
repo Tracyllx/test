@@ -1,0 +1,32 @@
+<view class="box">
+    <view class="box-t">
+        <text>请输入放行车牌号</text>
+        <view class="box-b">
+         <picker mode="selector" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="data4">
+            粤
+        </picker>
+        <input class="inp"></input>
+        <text class="tex3">新能源</text>
+        </view>
+    </view>
+    
+    <view class="content">
+        <view class="data1">
+        <text class="txt">申请人：</text> <input placeholder="请输入姓名" type="text"></input>
+        </view>
+        <view class="data2">
+        <text class="txt">所属部门：</text><input placeholder="请输入所属部门" type="text"></input>
+       </view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="data3">
+        <text class="txt">丢失时间：</text> <view class="picker picker1">
+             {{date}}
+                    </view>
+        </picker>
+    </view>
+    <view class="detail">
+        <text>放行原因:</text>
+        <textarea class="text" name="" id="" cols="30" rows="10" placeholder="请输入放行原因......"> 
+        </textarea>
+    </view>
+    <button class="submit" bindtap='todetail'>提交</button>
+</view>

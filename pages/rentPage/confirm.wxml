@@ -1,0 +1,33 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='ytb-scroll-view'>
+        <view class='user-info'>
+            <text>租赁人：{{name}}</text>
+            <text class='fr'>{{phone}}</text>
+        </view>
+        <view class='detail-box'>
+            <view class='detail-img v-center'>
+                <image wx:if='{{rentInfo.imgUrl}}' src='../../image/my/{{rentInfo.imgUrl}}' style='width:{{rentInfo.styleW * 1.5}}rpx;height:{{rentInfo.styleH * 1.5}}rpx;'></image>
+            </view>
+            <view class='detail-info'>
+                <view class='info-name'>{{rentInfo.name}}</view>
+                <view class='info-txt'>编号：93</view>
+                <view class='info-txt'>编码：460494</view>
+                <view class='price-bar'>
+                    <text>¥ </text>
+                    <text class='total-num'>{{rentInfo.total}}</text>
+                    <text>(押金{{rentInfo.price}}，租金{{rentInfo.rented}})</text>
+                </view>
+            </view>
+        </view>
+        <view class='line'></view>
+        <view class='desc-title'>收费说明：</view>
+        <view class='desc-con'>物品租赁按天收费，物品归还后，费用从押金里扣除，收费金额在24小时内退还给您，10分钟内有任何问题可免费退换货，超过10分钟按正常物品归还收费。</view>
+    </scroll-view>
+    <view class='con-btn'>
+        <view class='con-btn-item con-btn-total'>
+            <text>合计：¥</text>
+            <text class='total-num'>{{rentInfo.total}}</text>
+        </view>
+        <view class='con-btn-item con-btn-conf' catchtap='confirmTap'>确认租赁</view>
+    </view>
+</view>

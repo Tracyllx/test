@@ -1,0 +1,22 @@
+<view class='ytb-container'>
+    <view class='bg-img'>
+        <view class='banner'>
+            <image src='{{bannerImg}}'></image>
+        </view>
+        <view class='content'>中国第一座弹射式"云霄飞车"，首先冲上34米的高塔，再以时速86公里俯冲，然后再冲上一个垂直的360度环转。环转后，云霄飞车沿倾斜轨道回转270度，然后是两次过山车迷最喜爱的失重驼峰。短短85秒，让您将感受前所未有的刺激。由于轨道刻意接近地面，乘客速度感与震撼感更强，使其感觉的移动速度比实际速度更快，一股强烈的震撼感和压迫感瞬间将直袭您的心脏。</view>
+        <view class='content'>云霄飞车，最高点34米，最高弹射速度91公里/小时。</view>
+    </view>
+    <view class='btn-box'>
+        <view class='btn-item yuyueBtn' catchtap='btnTap' data-index='yuyue'>
+            <image src='{{yuyueImg}}'></image>
+            预定
+        </view>
+        <view class='btn-item gotoBtn' catchtap='btnTap' data-index='goto'>
+            <image src='{{gotoImg}}'></image>
+            去这里
+        </view>
+    </view>
+    <view class='player-box'>
+        <audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+    </view>
+</view>

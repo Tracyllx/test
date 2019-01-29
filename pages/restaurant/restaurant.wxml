@@ -1,0 +1,54 @@
+<view class='ytb-container'>
+    <scroll-view class='ytb-scroll-view'>
+        <view class='line-item'>
+            <view class='line-title'>姓名：</view>
+            <view class='line-content'>
+                <view class='input'>
+                    <input type='text' maxlength="12" value='{{username}}' bindinput='nameInput' bindblur='nameInput' placeholder="请输入您的姓名" placeholder-class='plh-class' />
+                </view>
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio-label" wx:for="{{radioList}}" wx:key='{{index}}'>
+                        <radio value="{{item.name}}" checked="{{item.checked}}" color='#39b6a3' />{{item.value}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class='line-item'>
+            <view class='line-title'>手机号：</view>
+            <view class='line-content'>
+                <view class='input'>
+                    <input type='number' maxlength="11" value='{{userphone}}' bindinput='phoneInput' bindblur='phoneInput' placeholder="请输入您的手机号" placeholder-class='plh-class' />
+                </view>
+            </view>
+        </view>
+        <view class='line-item'>
+            <view class='line-title'>人数：</view>
+            <view class='line-content'>
+                <view class='input'>
+                    <input type='number' maxlength="5" value='{{peoplenum}}' bindinput='numInput' bindblur='numInput' placeholder="请输入人数" placeholder-class='plh-class' />
+                </view>
+            </view>
+        </view>
+        <view class='line-item no-b'>
+            <view class='line-title'>时间：</view>
+            <view class='line-content'>
+                <picker class='picker-bar-date' mode="date" value="{{choosedate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindPickerChange" data-index='1'>
+                    <view>{{choosedate}}</view>
+                </picker>
+                <picker class='picker-bar' value="{{timeidx1}}" range="{{timearray}}" bindchange="bindPickerChange" data-index='2'>
+                    <view>{{timearray[timeidx1]}}</view>
+                </picker>
+                <text class='time-line'>-</text>
+                <picker class='picker-bar' value="{{timeidx2}}" range="{{timearray}}" bindchange="bindPickerChange" data-index='3'>
+                    <view>{{timearray[timeidx2]}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class='line-block'></view>
+        <view class='line-item no-b'>
+            <view class='line-title'>预约规则：</view>
+            <view class='line-content desc'>预约时间段内未到视为放弃预约</view>
+        </view>
+    </scroll-view>
+    <view class='btn-box' catchtap='submitTap'>提交预约</view>
+</view>

@@ -1,0 +1,182 @@
+/**app.wxss**/
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.ytb-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: content-box;
+    background-color: #fff;
+    position: relative;
+    color: #000;
+}
+
+.ytb-scroll-view {
+    position: absolute;
+    top: 0;
+    bottom: 100rpx;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ytb-footer {
+    width: 100%;
+    height: 99rpx;
+    overflow: hidden;
+    background-color: #fff;
+    border-top: 1rpx solid #eee;
+    position: absolute;
+    bottom: 0;
+}
+
+.ytb-home, .ytb-my {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 26rpx;
+    color: #b4b4b4;
+    font-family: "宋体";
+    padding-top: 15rpx;
+}
+
+.ytb-home>image, .ytb-my>image {
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6rpx;
+}
+
+.baseColor {
+    color: #39b6a3;
+}
+
+/* 暂无更多数据~ */
+
+.nonedata {
+    width: 100%;
+    line-height: 70rpx;
+    height: 70rpx;
+    text-align: center;
+    color: #ccc;
+    font-size: 27rpx;
+}
+
+.plh-class {
+    font-size: 28rpx;
+    color: #999999;
+}
+
+/* 垂直居中 */
+
+.v-center::after {
+    width: 0;
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+/* flex布局：图标、标题、说明、右箭头 */
+
+.kk-cell-box {
+    padding: 20rpx 3%;
+    height: 68rpx;
+    line-height: 68rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+}
+
+.kk-cell-icon {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 16rpx;
+}
+
+.kk-cell-title {
+    flex: 1;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.kk-cell-desc {
+    font-size: 28rpx;
+    color: #999;
+}
+
+.kk-cell-label {
+    width: 180rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.kk-cell-input {
+    flex: 1;
+    height: 100%;
+}
+
+.kk-cell-input>input {
+    width: 100%;
+    height: 100%;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.plh-class {
+    font-size: 28rpx;
+    color: #999;
+}
+
+.kk-cell-code {
+    width: 180rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    margin-top: 5rpx;
+    overflow: hidden;
+    font-size: 26rpx;
+    text-align: center;
+    color: #39b6a3;
+    border: 1rpx solid #39b6a3;
+    border-radius: 60rpx;
+}
+
+.kk-cell-arrow {
+    width: 50rpx;
+    position: relative;
+}
+
+.kk-cell-arrow::after {
+    content: " ";
+    display: inline-block;
+    height: 24rpx;
+    width: 24rpx;
+    border-width: 1rpx 1rpx 0 0;
+    border-color: #bcbcbc;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    margin-top: -12rpx;
+    position: absolute;
+    top: 50%;
+    right: 4rpx;
+}

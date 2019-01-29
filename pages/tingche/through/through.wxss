@@ -1,0 +1,144 @@
+.box{
+    height:1220rpx;
+    background:#F5F5F5;
+    position:relative;
+}
+.box-t{
+    height:206rpx;
+ 
+    background:#fff;
+    padding:50rpx 46rpx 1rpx 46rpx;
+    font-size:30rpx;
+}
+.box-b{
+    width:100%;
+    height:78rpx;
+    border:2rpx solid #ccc;
+    margin-right:42rpx;
+    border-radius: 6rpx;
+    margin-top:20rpx;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height:350rpx;
+    align-items: center;
+   
+    position: relative;
+}
+.data1{
+    margin-top:30rpx;
+    width:518rpx;
+    height:88rpx;
+    background:#fff;
+    border-radius: 15rpx 15rpx 0 0;
+    font-size: 24rpx;
+    color:#999999;
+    position:relative;
+    padding-left:180rpx;
+    line-height:88rpx;
+    border-bottom:2rpx solid #CCC;
+}
+.data1 input{
+    height:28rpx;
+    margin-top:20rpx;
+    font-size:28rpx;
+    color:#999;
+}
+.txt{
+    position:absolute;
+    left:28rpx;
+    top:0rpx;
+    font-size: 30rpx;
+    color:#333333;
+}
+.data2{
+    width:518rpx;
+    height:88rpx;
+    background:#fff;
+    border-radius:0 0 15rpx 15rpx;
+    font-size: 24rpx;
+    color:#999999;
+    position:relative;
+    padding-left:180rpx;
+    line-height:88rpx;
+
+}
+.data2 input{
+    height:28rpx;
+    margin-top:20rpx;
+    font-size:28rpx;
+    color:#999;
+}
+.txt{
+    position:absolute;
+    left:28rpx;
+    top:0rpx;
+    font-size: 30rpx;
+    color:#333333;
+}
+.data4{
+    width:100rpx;
+    height:78rpx;
+    border-right:2rpx solid #ccc;
+    line-height:78rpx;
+    text-align:center;
+    float: left;
+}
+.inp{
+    width:446rpx;
+    height:78rpx;
+    float:left;
+    border-right:2rpx solid #ccc;
+    padding-left:8rpx;
+}
+.tex3{
+    height:78rpx;
+    width:106rpx;
+    text-align:center;
+    line-height:78rpx;
+    font-size:30rpx;
+    margin-left:4rpx;
+}
+.data3{
+    margin-top:30rpx;
+    width:518rpx;
+    height:88rpx;
+    background:#fff;
+    border-radius: 15rpx;
+    font-size: 24rpx;
+    color:#999999;
+    position:relative;
+    padding-left:180rpx;
+    line-height:88rpx;
+    border-bottom:2rpx solid #CCC;
+}
+.detail{
+    width:100%;
+    padding:0 24rpx 0 24rpx;
+}
+.detail text{
+    font-size:30rpx;
+}
+.detail .text{
+    width:642rpx;
+    height:258rpx;
+    background:#fff;
+    border-radius: 15rpx;
+    padding:30rpx;
+    font-size:24rpx;
+    margin-top:30rpx;
+}
+.submit{
+    width:518rpx;
+    height:88rpx;
+    background:#68B8FB;
+    font-size:30rpx;
+    line-height:88rpx;
+    position:absolute;
+    top:90%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    border-radius:40rpx;
+}

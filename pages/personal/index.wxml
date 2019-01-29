@@ -1,0 +1,56 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='ytb-scroll-view'>
+        <view class='my-body'>
+            <view class='my-image'>
+                <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登 录</button>
+                <block wx:else>
+                    <view class='my-header-img' catchtap='bindViewTap' data-id='1'>
+                        <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                    </view>
+                    <!-- <view class='my-nick-name'>{{userInfo.nickName}}</view> -->
+                </block>
+            </view>
+            <view class='my-info'>
+                <view class='my-info-b'>{{userInfo.nickName||'您的昵称...'}}</view>
+                <!-- <view class='my-info-b'>没事就进来逛逛～</view> -->
+                <!-- <view class='my-info-s'>留下点什么吧</view> -->
+            </view>
+        </view>
+        <view class='detail-box0'>
+            <view class='detail-icon'>
+                <image src='../../image/my/deer.png'></image>
+            </view>
+            <view class='detail-box1'>
+                <view class='detail-box2 v-center'>
+                    <text class='detail-num'>钱包余额：1,000.00</text>
+                    <text class='detail-look' catchtap='bindViewTap' data-id='2'>查看</text>
+                </view>
+                <view class='detail-tip'>
+                    <text></text>
+                </view>
+            </view>
+        </view>
+        <view class='grid-list'>
+            <block wx:for='{{gridData}}' wx:key='{{index}}'>
+                <view class='grid-item {{item.id%3==0?"no-br":""}}' catchtap='gotoTap' data-id='{{item.id}}'>
+                    <view class='grid-icon'>
+                        <image mode='aspectFill' wx:if='{{item.icon}}' src='{{item.icon}}'></image>
+                    </view>
+                    <view class='grid-title'>{{item.title}}</view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <include src="../common/view-footer.wxml" />
+    <!-- 核票码 -->
+    <view class='check-code' catchtap='gotoTap' data-id='2' wx:if='{{showCheckCode}}'></view>
+    <view class='check-box' wx:if='{{showCheckCode}}'>
+            <view class='check-circle-l'></view>
+            <view class='check-circle-r'></view>
+            <view class='check-title'>向商家出示此二维码进行核票</view>
+            <view class='check-img v-center'>
+                <image src='../../image/my/code.png'></image>
+            </view>
+            <view class='check-num'>核票码：2458 4842 3960 1485</view>
+        </view>
+</view>

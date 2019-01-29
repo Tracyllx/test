@@ -1,0 +1,7 @@
+<view class='ytb-container'>
+    <view class='box-icon'>
+        <icon type='success' size='50' color='#39b6a3'></icon>
+    </view>
+    <view class='box-txt'>绑定设备成功，祝您玩的开心！</view>
+    <view class='btn-bar1' catchtap='bindViewTap'>返 回</view>
+</view>

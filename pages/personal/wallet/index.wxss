@@ -1,0 +1,90 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-bar1 {
+    width: 88%;
+    margin: 50rpx auto;
+    height: 90rpx;
+    overflow: hidden;
+    line-height: 90rpx;
+    font-size: 34rpx;
+    letter-spacing: 3rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 90rpx;
+    background-color: #39b6a3;
+}
+
+.btn-bar2 {
+    width: 88%;
+    margin: 50rpx auto;
+    height: 90rpx;
+    overflow: hidden;
+    line-height: 90rpx;
+    font-size: 34rpx;
+    letter-spacing: 3rpx;
+    text-align: center;
+    color: #39b6a3;
+    border-radius: 90rpx;
+    background-color: #fff;
+    border: 1rpx solid #39b6a3;
+}
+
+.detail-bar {
+    position: relative;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: right;
+    padding-right: 50rpx;
+    font-size: 26rpx;
+    color: #39b6a3;
+}
+
+.detail-bar::after {
+    content: " ";
+    display: inline-block;
+    height: 18rpx;
+    width: 18rpx;
+    border-width: 1rpx 1rpx 0 0;
+    border-color: #39b6a3;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    margin-top: -9rpx;
+    position: absolute;
+    top: 50%;
+    right: 24rpx;
+}
+
+.img-box {
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    margin: 30rpx auto;
+}
+
+.img-box>image {
+    width: 252rpx;
+    height: 325.5rpx;
+    vertical-align: middle;
+}
+
+.my-txt {
+    font-size: 30rpx;
+    color: #666;
+    text-align: center;
+}
+
+.price-bar {
+    font-size: 50rpx;
+    font-weight: 600rpx;
+    color: #39b6a3;
+    text-align: center;
+}
+
+.price-tip {
+    font-size: 30rpx;
+    font-weight: normal;
+}

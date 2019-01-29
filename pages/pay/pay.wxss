@@ -1,0 +1,50 @@
+.box{
+    width:100%;
+    height:1210rpx;
+    background:#f5f5f5;
+    padding-top:72rpx;
+}
+.box-t{
+    width:606rpx;
+    height:362rpx;
+    background:#fff;
+    margin:0 auto;
+    border-radius: 30rpx;
+    padding:0 22rpx 0 22rpx;
+}
+.box-t .head{
+    text-align: center;
+    font-size: 30rpx;
+    width:568rpx;
+    border-bottom:2rpx solid #ccc;
+    margin:0 auto;
+    height:90rpx;
+    line-height: 90rpx;
+}
+.box-t .foot{
+    height:270rpx;
+    width:606rpx;
+    font-size:30rpx;
+}
+.box-t .foot .foot1,.foot2,.foot3{
+    height:88rpx;
+    line-height: 88rpx;
+    
+}
+.txt2{
+    float: right;
+    color:#999;
+}
+.txt3{
+    color:#F67331;
+}
+.btn{
+    width:518rpx;
+    height:88rpx;
+    background:#68B8FB;
+    color:#fff;
+    font-size: 30rpx;
+    line-height: 88rpx;
+    border-radius: 40rpx;
+    margin-top:540rpx;
+}

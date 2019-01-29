@@ -1,0 +1,21 @@
+<view class='ytb-container'>
+    <view class='img-box'>
+        <image src='../../../image/my/wallet.png'></image>
+    </view>
+    <view class='my-txt'>我的余额</view>
+    <view class='price-bar'>
+        <text class='price-tip'>¥ </text>
+        <text>666.99</text>
+    </view>
+    <view class='list-box'>
+        <view class='list-title'>请选择充值金额</view>
+        <view class='item-box {{activeIdx==index?"active":""}}' wx:for='{{list}}' wx:key='{{index}}' catchtap='chooseTap' data-index='{{index}}'>
+            <view class='item-txt'>
+                <text class='fz-b'>{{item.num}}</text>
+                <text>游乐币</text>
+            </view>
+            <view class='item-txt'>售价{{item.sell}}元</view>
+        </view>
+    </view>
+    <view class='btn-bar1' catchtap='bindViewTap' data-index='2'>确认充值</view>
+</view>

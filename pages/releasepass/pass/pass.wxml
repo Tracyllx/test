@@ -1,0 +1,23 @@
+<view class="box">
+    
+    <view class="box-t">
+        <view class="header">
+           <text class="txt1">粤A***35</text><text class="txt2">2018-11-13  13:16:45</text>
+        </view>
+        
+        <view class="box-c">
+            <view class="box1">
+                <text class="txt1">长鹿休博园</text>
+                <text class="txt2">景区</text>
+            </view>
+            <view class="box2">
+                <text class="txt1">1小时33分钟</text>
+                <text class="txt2">停车时长</text>
+            </view>
+            <view class="box3">
+                <text>免费放行</text>
+            </view>
+        </view>
+    </view>
+    
+</view>

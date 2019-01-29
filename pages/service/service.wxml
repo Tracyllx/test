@@ -1,0 +1,19 @@
+<view class='ytb-container'>
+    <view class='box'>
+        <button style='background-color:#FA9581;' hover-class='none' catchtap='showPhone'>
+            <view class='call'>
+                <image src='../../image/call.png'></image>
+            </view>
+            <view class='txt'>电话客服</view>
+        </button>
+        <button style='background-color:#7FB5FC;' hover-class='none' open-type="contact" catchcontact="bindcontact">
+            <view class='online'>
+                <image src='../../image/online.png'></image>
+            </view>
+            <view class='txt'>在线客服</view>
+        </button>
+    </view>
+    <view class='mask' wx:if='{{showCall}}' catchtap='showPhone'>
+        <view class='phone' catchtap='callNumber'>拨打 400 9690 196</view>
+    </view>
+</view>

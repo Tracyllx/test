@@ -1,0 +1,32 @@
+<view class='ytb-container'>
+    <view class='info'>
+        <view class='info-img'>
+            <image src='{{imgUrl}}'></image>
+        </view>
+        <view class='info-con'>
+            <view class='info-title'>海港餐厅</view>
+            <view class='info-desc'>中桌（4人）</view>
+        </view>
+    </view>
+    <view class='line-block'></view>
+    <view class='detail'>
+        <view class='detail-desc'>
+            <view class='detail-desc-item'>
+                <view class='c-3'>B014</view>
+                <view class='c-9'>排队号</view>
+            </view>
+            <view class='detail-desc-item'>
+                <view class='c-3'>34</view>
+                <view class='c-9'>预计等待/分钟</view>
+            </view>
+        </view>
+        <view class='detail-desc'>
+            <view class='flex-title c-6'>人数</view>
+            <view class='flex-desc c-3'>{{dinnerInfo.peoplenum}}人</view>
+        </view>
+        <view class='detail-desc'>
+            <view class='flex-title c-6'>时间</view>
+            <view class='flex-desc c-3'>{{dinnerInfo.choosedate}} {{dinnerInfo.time}}</view>
+        </view>
+    </view>
+</view>

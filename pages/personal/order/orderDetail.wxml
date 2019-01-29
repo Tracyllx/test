@@ -1,0 +1,137 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='ytb-scroll-view'>
+        <view class='pay-overtime' wx:if='{{orderDetail.orderStatus==1}}'>
+            <view class='overtime-title'>支付剩余时间</view>
+            <view class='overtime-desc remaining-time'>00:{{minute1}}{{minute2}}:{{second1}}{{second2}}</view>
+            <view class='overtime-continue' catchtap='orderButton' data-type='continue'>继续支付</view>
+        </view>
+        <!-- cancelType: 1:手动取消订单  2：超时取消订单 3：其他 -->
+        <view class='pay-overtime' wx:if='{{orderDetail.cancelType==2}}'>
+            <view class='overtime-title'>支付超时</view>
+            <view class='overtime-desc'>订单已超过支付时间，请重新下单</view>
+            <view class='overtime-continue' catchtap='gotoOrgn'>继续预定</view>
+        </view>
+        <view class='status-txt {{orderDetail.orderStatus==1||orderDetail.orderStatus==2||orderDetail.orderStatus==4?"c-base":""}}'>
+            <text>订单状态：{{orderStatusArr[orderDetail.orderStatus]}}</text>
+        </view>
+        <view class='gray-block'></view>
+        <!-- 酒店详情 -->
+        <view class='hotel-detail' wx:if='{{orderDetail.product_type==9}}'>
+            <view class='detail-title'>
+                <view class='detail-title-orgn'>{{orderDetail.orgnName}}</view>
+                <view class='detail-title-prod'>{{orderDetail.productName}}</view>
+            </view>
+            <view class='detail-flex pd-b'>
+                <view class='detail-flex-1 detail-desc'>
+                    <text space='ensp' decode>{{orderDetail.productAddress}}</text>
+                </view>
+                <view class='look-seller v-center' catchtap='gotoOrgn'>
+                    <text>查看商家</text>
+                    <image class='arrow-left-hl' src='../../imgs/iconImg/arrow_left_HL.png'></image>
+                </view>
+            </view>
+            <view class='detail-title bd-t'>预定信息</view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.name}}'>
+                <view class='detail-flex-label'>入住人</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.name}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.mobileNo}}'>
+                <view class='detail-flex-label'>联系手机</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.mobileNo}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd'>
+                <view class='detail-flex-label'>预定到店</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.arriveTime}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.instructions}}'>
+                <view class='detail-flex-label'>入住说明</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.instructions}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 景点详情 -->
+        <view class='scenic-detail' wx:if='{{orderDetail.product_type!=9}}'>
+            <view class='detail-title'>
+                <block wx:if='{{orderDetail.product_type==12||orderDetail.product_type==13||orderDetail.product_type==14}}'>
+                    <view class='detail-title-orgn'>私人定制</view>
+                </block>
+                <view wx:else class='detail-title-orgn'>{{orderDetail.orgnName}}</view>
+                <view class='detail-title-prod'>{{orderDetail.productName}}</view>
+            </view>
+            <view class='detail-flex detail-flex-pd bd-t' wx:if='{{orderDetail.orderDate}}'>
+                <view class='detail-flex-label'>使用日期</view>
+                <view class='detail-flex-1 c-price'>
+                    <text space='ensp' decode>{{orderDetail.orderDate}} {{orderDetail.orderDateWeek}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.instructions}}'>
+                <view class='detail-flex-label'>使用方法</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.instructions}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.open_time}}'>
+                <view class='detail-flex-label'>换票时间</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.open_time}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.get_ticket_addr}}'>
+                <view class='detail-flex-label'>换票地址</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.get_ticket_addr}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd' wx:if='{{orderDetail.product_addr}}'>
+                <view class='detail-flex-label'>入园地址</view>
+                <view class='detail-flex-1'>
+                    <text space='ensp' decode>{{orderDetail.productAddress}}</text>
+                </view>
+            </view>
+            <view class='detail-flex detail-flex-pd pd-b' wx:if='{{orderDetail.ticketNum}}'>
+                <view class='detail-flex-label'>购买数量</view>
+                <view class='detail-flex-1'>{{orderDetail.ticketNum}}张</view>
+            </view>
+        </view>
+        <!-- 入园凭证 -->
+        <view class='voucher-code' wx:if='{{orderDetail.voucher}}'>
+            <view class='voucher-code-num {{orderDetail.orderStatus==5||orderDetail.orderStatus==6?"voucher-num-disable":""}} {{orderDetail.orderStatus==5?"voucher-num-refund":""}}'>
+                <text>入园凭证码：{{orderDetail.voucher}}</text>
+            </view>
+            <view class='voucher-code-img {{orderDetail.orderStatus==5||orderDetail.orderStatus==6?"voucher-img-disable":""}}'>
+                <image class='code-img' wx:if='{{orderDetail.qrcodeUrl}}' mode='aspectFill' src='{{baseUrl}}ztc/product2/qrCodeLogo.png?content={{orderDetail.voucher}}'></image>
+            </view>
+        </view>
+        <!-- 退改规则 -->
+        <view class='detail-flex detail-flex-pd pd-t' wx:if='{{orderDetail.refund_rule}}'>
+            <view class='detail-flex-label'>退改规则</view>
+            <view class='detail-flex-1 c-price'>
+                <text space='ensp' decode>{{orderDetail.refund_rule}}</text>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='detail-btn v-center'>
+        <view wx:if='{{orderDetail.orderStatus!=1}}' class='btn-item c-green' catchtap='orderButton' data-type='onemore'>再来一单</view>
+        <view wx:if='{{orderDetail.orderStatus==1}}' class='btn-item c-red' catchtap='orderButton' data-type='cancel'>取消订单</view>
+        <!-- <view wx:if='{{orderDetail.orderStatus==1}}' class='btn-item c-green' catchtap='orderButton' data-type='continue'>继续付款</view> -->
+        <view wx:if='{{orderDetail.orderStatus==2}}' class='btn-item c-orage' catchtap='orderButton' data-type='refund'>申请退款</view>
+        <view wx:if='{{orderDetail.orderStatus==3||orderDetail.orderStatus==5||orderDetail.orderStatus==6}}' class='btn-item c-red' catchtap='orderButton' data-type='delete'>删除订单</view>
+    </view>
+    <!-- 自定义提示弹窗 -->
+    <view wx:if='{{dialogShow}}' class='kk-mask'>
+        <view class='kk-mask-box'>
+            <view class='kk-mask-content'>是否{{dialogTxt}}该订单？</view>
+            <view class='kk-mask-btn'>
+                <view class='kk-mask-btn-item gray999' catchtap='dialogButton' data-type='cancel'>取 消</view>
+                <view class='kk-mask-btn-item baseColor no-b' catchtap='dialogButton' data-type='confirm'>确 定</view>
+            </view>
+        </view>
+    </view>
+</view>

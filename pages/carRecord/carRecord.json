@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "before": "before/before",
+    "after": "after/after"
+}
+}

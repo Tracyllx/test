@@ -1,0 +1,11 @@
+<view class='ytb-container'>
+    <scroll-view scroll-y class='balanceDetail'>
+        <view class='kkBar' wx:for='{{list}}' wx:key='{{index}}'>
+            <view class='kkBar-l'>
+                <view class='kkBar-title chuizhi'>{{item.name}}</view>
+                <view class='kkBar-time chuizhi'>{{item.time}}</view>
+            </view>
+            <view class='kkBar-r chuizhi {{item.money > 0 ? "jia" : ""}} {{item.money < 0 ? "jian" : ""}}'>{{item.money > 0 ? '+' + item.money : item.money}}</view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,19 @@
+<view class='ytb-container'>
+    <view class='box'>
+        <view class='box-icon v-center'>
+            <icon type='success' size='40' color='#39b6a3'></icon>
+        </view>
+        <view class='box-info'>
+            <view class='box-img'>
+                <image src='../../../image/my/watch.png'></image>
+            </view>
+            <view class='box-detail'>
+                <view class='box-txt'>ID：54232324</view>
+                <view class='box-txt'>余额：200.00</view>
+                <view class='box-txt'>有效期：2018-11-12</view>
+                <view class='box-txt'>NO.2341</view>
+            </view>
+        </view>
+    </view>
+    <view class='btn-bar1' catchtap='bindViewTap'>确认绑定</view>
+</view>

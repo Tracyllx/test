@@ -1,0 +1,18 @@
+<view class="box">
+    <view class="content">
+        <picker mode="multiSelector" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" class="data1">
+        <text class="txt">紧急程度：</text> <view class="picker picker1">
+             {{date}}
+                    </view>
+        </picker>
+           <view class="content2">
+             <text>姓  名：</text><input type="text" placeholder="请输入真实的姓名"></input>
+           </view>   
+    </view>
+    <view class="detail">
+        <text>发布信息内容:</text>
+        <textarea class="text" name="" id="" cols="30" rows="10" placeholder="请详细说明你要描述内容..."> 
+        </textarea>
+    </view>
+    <button class="submit" bindtap='todetail'>发布</button>
+</view>

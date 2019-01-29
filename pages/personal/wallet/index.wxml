@@ -1,0 +1,13 @@
+<view class='ytb-container'>
+    <view class='detail-bar' catchtap='bindViewTap' data-index='1'>消费明细</view>
+    <view class='img-box'>
+        <image src='../../../image/my/wallet.png'></image>
+    </view>
+    <view class='my-txt'>我的余额</view>
+    <view class='price-bar'>
+        <text class='price-tip'>¥ </text>
+        <text>{{myWallet}}</text>
+    </view>
+    <view class='btn-bar1' catchtap='bindViewTap' data-index='2'>我要充值</view>
+    <view class='btn-bar2' catchtap='bindViewTap' data-index='3'>我要提现</view>
+</view>

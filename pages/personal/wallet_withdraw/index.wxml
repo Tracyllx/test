@@ -1,0 +1,24 @@
+<view class='withdrawals'>
+    <view class='title'>提现金额</view>
+    <view class='input'>
+        <view class='input-tip'>¥</view>
+        <view class='input-box'>
+            <input type='number' maxlength='12' placeholder='' value='{{inputVal}}' focus='{{focus}}' bindinput='bindInput' bindblur='bindInput' placeholder='0.00' placeholder-class='plhClass'></input>
+        </view>
+    </view>
+    <view class='tip2'>
+        可提现金额
+        <text class='color'> ¥{{myWallet}}</text>
+        <text class='fr color' catchtap='getAll'>全部提现</text>
+    </view>
+</view>
+<view class='line'></view>
+<view class='kk-cell-box'>
+    <view class='kk-cell-label'>手机验证码：</view>
+    <view class='kk-cell-input'>
+        <input type='number' value='{{phoneNum}}' placeholder='绑定手机验证码' placeholder-class='plh-class'></input>
+    </view>
+    <view class='kk-cell-code '>获取验证码</view>
+</view>
+<view class='tip-note'>提示：所有零钱都将提现至微信零钱</view>
+<view class='btn-bar1' style='background-color: {{disableBtn?"#ccc":"#39b6a3"}};'>确认提现</view>

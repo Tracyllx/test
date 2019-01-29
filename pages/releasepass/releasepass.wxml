@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class='tab-wrapper'>
+    <view id='tab' class="tab-left1">
+         <view id='tableft' class='tab-left {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>放行条</view>
+    </view>
+    <view id='tabright' class="tab-left2">
+         <view id='tabright' class='tab-right {{currentTab === 1 ? "tab-active":""}}' bindtap='switchTab'>商家劵</view>
+    </view>
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 0}}'><pass/></view>
+  <view class='content-wrapper' wx:if='{{currentTab === 1}}'><juan/></view>
+</view>

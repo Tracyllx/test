@@ -1,0 +1,274 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.my-body {
+    width: 100%;
+    height: 280rpx;
+    overflow: hidden;
+    background-color: #39b6a3;
+    display: flex;
+}
+
+.my-image {
+    width: 200rpx;
+    height: 200rpx;
+    overflow: hidden;
+}
+
+.my-header-img {
+    margin: 25rpx auto;
+    width: 150rpx;
+    height: 150rpx;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.my-header-img>image {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.my-nick-name {
+    padding-top: 10rpx;
+    letter-spacing: 2rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.my-body button {
+    margin: 75rpx auto 0;
+    width: 80%;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    color: #39b6a3;
+    background-color: #fff;
+    border-radius: 60rpx;
+}
+
+.my-info {
+    flex: 1;
+    height: 80rpx;
+    margin-top: 80rpx;
+    padding-left: 24rpx;
+    overflow: hidden;
+}
+
+.my-info-b {
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.my-info-s {
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.grid-list {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 160rpx;
+    border-top: 1rpx solid #eee;
+}
+
+.grid-item {
+    width: 33%;
+    height: auto;
+    padding: 20rpx 0;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    border-right: 1rpx solid #eee;
+    border-bottom: 1rpx solid #eee;
+}
+
+.grid-icon {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+}
+
+.grid-icon>image {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.grid-title {
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 26rpx;
+    margin-top: 6rpx;
+}
+
+.no-br {
+    border-right: 0;
+}
+
+.detail-box0 {
+    position: absolute;
+    top: 200rpx;
+    left: 10%;
+    width: 80%;
+    height: 200rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 5rpx 5rpx 15rpx rgba(43, 109, 99, 0.3);
+    display: flex;
+}
+
+.detail-box1 {
+    flex: 1;
+    margin: 16rpx;
+    background-color: #39b6a3;
+    border-radius: 20rpx;
+    display: flex;
+    position: relative;
+}
+
+.detail-box2 {
+    flex: 1;
+    margin: 16rpx 24rpx;
+    border: 1rpx dashed #fff;
+    border-radius: 20rpx;
+}
+
+.detail-num {
+    padding-left: 20rpx;
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.detail-look {
+    display: inline-block;
+    width: 100rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    margin-left: 50rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #39b6a3;
+    background-color: #fff;
+    border-radius: 46rpx;
+}
+
+.detail-tip {
+    position: absolute;
+    top: -20rpx;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 20rpx;
+    height: 40rpx;
+    overflow: hidden;
+    background-color: #fff;
+    border: 2rpx solid #369687;
+    border-radius: 20rpx;
+    text-align: center;
+}
+
+.detail-tip>text {
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    background-color: #369687;
+    border-radius: 15rpx;
+    margin-bottom: 5rpx;
+}
+
+.detail-icon {
+    position: absolute;
+    top: -125rpx;
+    right: -56rpx;
+    width: 93rpx;
+    height: 130rpx;
+    overflow: hidden;
+}
+
+.detail-icon>image {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* 核票码 */
+
+.check-code {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.check-box {
+    z-index: 2;
+    position: relative;
+    width: 88%;
+    margin: 20% auto 0;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 16rpx;
+}
+
+.check-title {
+    height: 68rpx;
+    line-height: 68rpx;
+    font-size: 30rpx;
+    color: #39b6a3;
+    background-color: #F5F5F5;
+    padding-left: 40rpx;
+}
+
+.check-img {
+    width: 100%;
+    height: 500rpx;
+    text-align: center;
+    overflow: hidden;
+}
+
+.check-img>image {
+    width: 400rpx;
+    height: 400rpx;
+    vertical-align: middle;
+}
+
+.check-num {
+    width: 76%;
+    margin: 0 auto 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #39b6a3;
+    border: 1rpx solid #39b6a3;
+    border-radius: 16rpx;
+}
+
+.check-circle-l {
+    position: absolute;
+    bottom: 80rpx;
+    left: -40rpx;
+    width: 80rpx;
+    height: 80rpx;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+}
+
+.check-circle-r {
+    position: absolute;
+    bottom: 80rpx;
+    right: -40rpx;
+    width: 80rpx;
+    height: 80rpx;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+}

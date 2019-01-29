@@ -1,0 +1,248 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+/* 底部按钮 */
+
+.detail-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 99rpx;
+    overflow: hidden;
+    border-top: 1rpx solid #eee;
+    text-align: right;
+}
+
+.btn-item {
+    display: inline-block;
+    border-radius: 50rpx;
+    padding: 12rpx 16rpx;
+    margin: 0 16rpx;
+    font-size: 24rpx;
+}
+
+/* 支付超时 */
+
+.pay-overtime {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 50rpx 0 30rpx;
+}
+
+.overtime-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.overtime-desc {
+    text-align: center;
+    padding: 20rpx 0;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.overtime-continue {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 34rpx;
+    color: #fff;
+    border-radius: 80rpx;
+    background-color: #00c355;
+}
+
+/* 剩余时间 */
+
+.remaining-time {
+    font-size: 40rpx;
+}
+
+/* 订单状态 */
+
+.status-txt {
+    padding: 10rpx 24rpx;
+    line-height: 50rpx;
+    font-weight: 600;
+    font-size: 30rpx;
+    color: #333;
+}
+
+/* flex 布局 */
+
+.detail-flex {
+    display: flex;
+}
+
+.detail-flex-1 {
+    flex: 1;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.detail-flex-label {
+    width: 120rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.detail-flex-pd {
+    padding: 6rpx 24rpx;
+}
+
+/* 页面公共 */
+
+.detail-title {
+    padding: 10rpx 24rpx;
+}
+
+.detail-title-orgn {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.detail-title-prod {
+    font-size: 26rpx;
+    color: #333;
+}
+
+.detail-desc {
+    padding: 6rpx 24rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+/* 酒店详情 */
+
+.hotel-detail {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* 景点详情 */
+
+.scenic-detail {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* 查看商家 */
+
+.look-seller {
+    width: 140rpx;
+    padding-right: 24rpx;
+    text-align: right;
+    font-size: 26rpx;
+    color: #00c355;
+}
+
+.arrow-left-hl {
+    width: 13.5rpx;
+    height: 24rpx;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+/* 入园凭证 */
+
+.voucher-code {
+    margin: 0 24rpx;
+    height: auto;
+    overflow: hidden;
+    border-top: 1rpx solid #eee;
+    border-bottom: 1rpx solid #eee;
+}
+
+.voucher-code-num {
+    width: 80%;
+    margin: 50rpx auto 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #00c355;
+    border: 1rpx solid #00c355;
+    border-radius: 80rpx;
+}
+
+.voucher-num-disable {
+    color: #999;
+    border: 1rpx solid #999;
+}
+
+.voucher-num-refund {
+    text-decoration: line-through;
+}
+
+.voucher-code-img {
+    width: 320rpx;
+    height: 320rpx;
+    margin: 30rpx auto 50rpx;
+    overflow: hidden;
+}
+
+.voucher-img-disable {
+    opacity: 0.3;
+}
+
+.voucher-code-img>image {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* 字体颜色 */
+
+.c-green {
+    color: #00c355;
+    border: 1rpx solid #00c355;
+}
+
+.c-red {
+    color: #fd424d;
+    border: 1rpx solid #fd424d;
+}
+
+.c-orage {
+    color: #fff;
+    background-color: #ff4902;
+}
+
+.c-base {
+    color: #00c355;
+}
+
+.c-red-c {
+    color: #fd424d;
+}
+
+.c-price {
+    color: #ff4902;
+}
+
+/* padding */
+
+.bd-t {
+    padding-top: 16rpx;
+    border-top: 1rpx solid #eee;
+}
+
+.pd-b {
+    padding-bottom: 16rpx;
+}
+
+.pd-t {
+    padding-top: 16rpx;
+}
+
+.mg-b {
+    margin-bottom: 100rpx;
+}

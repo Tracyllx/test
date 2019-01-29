@@ -1,0 +1,10 @@
+<view class='ytb-footer'>
+    <view class='ytb-home {{isHomePage == true ? "baseColor" : ""}}' bindtap='changeHomePageHight'>
+        <image src='../../image/tab/{{isHomePage == true ? "tab_index_selected.png" : "tab_index.png"}}'></image>
+        首页
+    </view>
+    <view class='ytb-my {{isMyCenter == true ? "baseColor": ""}}' bindtap='changeMyCenterHight'>
+        <image src='../../image/tab/{{isMyCenter == true ? "tab_personal_selected.png" : "tab_personal.png"}}'></image>
+        我的
+    </view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/shizu/shiwu/shiwu.wxss */
+.box{
+    height:189rpx;
+    border-bottom: 2rpx solid #CCc;
+    padding:42rpx 24rpx 0rpx 24rpx;
+    font-size:32rpx;
+    position:relative;
+    margin:0 24rpx 0 24rpx;
+}
+.time{
+    font-size:24rpx;
+    color:#999999;
+    position: absolute;
+    bottom: 20rpx;
+    left:24rpx;
+}
+.btn{
+    width:110rppx;
+    height:58rpx;
+    background:#68B8FB;
+    position:absolute;
+    right:19rpx;
+    bottom:20rpx;
+    font-size:26rpx;
+    color:#FFF;
+    border-radius: 30rpx;
+    line-height:58rpx;
+}
